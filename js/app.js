@@ -353,7 +353,7 @@
             e.preventDefault();
             const targetId = this.getAttribute("href").substr(1);
             const targetElement = document.getElementById(targetId);
-            window.scrollTo({
+            if (innerWidth < 800) window.scrollTo({
                 top: targetElement.offsetTop - 156,
                 behavior: "smooth"
             });
